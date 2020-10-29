@@ -6,17 +6,17 @@ const minute = document.querySelector('.minute');
 const second = document.querySelector('.second');
 
 let timer = {
+    mili: 0,
     second: 0,
     minute: 0,
     hour: 0
 }
 
-
-
 start.addEventListener('click', startTimer);
 pause.addEventListener('click', pauseTimer);
 reset.addEventListener('click', resetTimer);
 
+let miliCounter;
 let secondCounter;
 let minuteCounter;
 let hourCounter;
@@ -26,6 +26,7 @@ minute.innerText = `0${timer.minute}`;
 hour.innerText = `0${timer.hour}`;;
 
 function initTimer() {
+    timer.mili = 0;
     timer.second = 0;
     timer.minute = 0;
     timer.hour = 0;
@@ -37,6 +38,16 @@ function initTimer() {
 initTimer();
 
 function startTimer() {
+    //miliseconds
+    miliCounter = setInterval(() => {
+        if (timer.mili < 998) {
+            timer.mili++;
+        } else {
+            timer.mili = 0;
+        }
+    }, 1);
+
+
     //seconds
     secondCounter = setInterval(() => {
         if (timer.second < 59) {
@@ -68,6 +79,7 @@ function startTimer() {
 }
 
 function pauseTimer() {
+    clearInterval(miliCounter);
     clearInterval(secondCounter);
     clearInterval(minuteCounter);
     clearInterval(hourCounter);
@@ -77,6 +89,7 @@ function pauseTimer() {
 
 function resetTimer() {
     initTimer();
+    clearInterval(miliCounter);
     clearInterval(secondCounter);
     clearInterval(minuteCounter);
     clearInterval(hourCounter);

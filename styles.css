@@ -4,25 +4,25 @@ body {
 }
 
 .container {
-    background: url(https://images.unsplash.com/photo-1587465665311-cff60ece0291?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80) no-repeat;
+    background: #97bdcfb6;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    flex-direction: column;
+    flex-direction: row;
 }
 
-.stopwatch {
+.timer {
     width: 500px;
     display: flex;
     color: white;
-    padding: 1rem;
+    padding: 0;
     font-size: 6rem;
     justify-content: space-around;
     align-items: center;
 }
 
-.stopwatch span {
+.timer span {
     width: 120px;
 }
 
@@ -41,7 +41,7 @@ body {
     color: whitesmoke;
     padding: 5px 15px;
     font-size: 1.4rem;
-    background: gray;
+    background: #808080;
     border-radius: 4px 4px 8px 8px;
     border: none;
     border-bottom: .5px solid #535353;
@@ -49,32 +49,43 @@ body {
 }
 
 .button:active {
-    box-shadow: 0 4px #103f5a;
-   transform: translateY(4px);
+    box-shadow: 0 4px #21526e;
+    transform: translateY(4px);
+    background: #a0a0a0;
 }
 
 .button:focus {
-    outline: 0; 
+    outline: 0;
 }
 
 .button:disabled {
-    background: #474747;
-    opacity: 0.4;
-    box-shadow:  #222222;
+    background: #ADADAD;
+    box-shadow: 0 4px #808080;
+    transform: translateY(4px);
+    opacity: .7;
 }
 
 @media (max-width: 700px){
-    .stopwatch {
-        font-size: 4rem;
-        width: 400px;
+    .container {
+        width: 100vw; 
     }
 
-    .stopwatch span {
+    .stopwatch {
+        width: 100%;
+    }
+
+    .timer {
+        font-size: 4rem;
+        padding: 0;
+        width: 100%;
+    }
+
+    .timer span {
         width: 60px;
     }
 
     .buttons {
-        width: 400px;
+        width: 100%;
         flex-direction: column;
     }
 
