@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    font-family: 'Josefin Sans'; 
+}
+
+.container {
+    background: url(https://images.unsplash.com/photo-1587465665311-cff60ece0291?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80) no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.stopwatch {
+    width: 500px;
+    display: flex;
+    color: white;
+    padding: 1rem;
+    font-size: 6rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.stopwatch span {
+    width: 120px;
+}
+
+.buttons { 
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.button {
+    width: 150px;
+    font-family: 'Varela Round';
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+    color: whitesmoke;
+    padding: 5px 15px;
+    font-size: 1.4rem;
+    background: gray;
+    border-radius: 4px 4px 8px 8px;
+    border: none;
+    border-bottom: .5px solid #535353;
+    box-shadow: 0 8px #3f3f3f;
+}
+
+.button:active {
+    box-shadow: 0 4px #103f5a;
+   transform: translateY(4px);
+}
+
+.button:focus {
+    outline: 0; 
+}
+
+.button:disabled {
+    background: #474747;
+    opacity: 0.4;
+    box-shadow:  #222222;
+}
+
+@media (max-width: 700px){
+    .stopwatch {
+        font-size: 4rem;
+        width: 400px;
+    }
+
+    .stopwatch span {
+        width: 60px;
+    }
+
+    .buttons {
+        width: 400px;
+        flex-direction: column;
+    }
+
+    .button {
+        margin-top: 50px;
+    }
+}
