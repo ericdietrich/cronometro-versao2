@@ -1,3 +1,6 @@
+
+
+
 export default function timer() {
     const start = document.querySelector('.start');
     const pause = document.querySelector('.pause');
@@ -12,6 +15,8 @@ export default function timer() {
         minute: 0,
         hour: 0
     }
+
+
 
     start.addEventListener('click', startTimer);
     pause.addEventListener('click', pauseTimer);
@@ -97,6 +102,8 @@ export default function timer() {
         start.removeAttribute('disabled');
     }
 }
+
+
 
 
 

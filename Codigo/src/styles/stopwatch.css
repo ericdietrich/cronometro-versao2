@@ -1,5 +1,5 @@
 .stopwatch {
-    width: 45%;
+    width: 46%;
     max-width: 800px;
     min-width: 380px;
 }
@@ -7,7 +7,7 @@
 .timer {
     width: 100%;
     display: flex;
-    color: white;
+    color: #FFFFFF;
     padding: 0;
     font-size: 96px;
     justify-content: space-between;

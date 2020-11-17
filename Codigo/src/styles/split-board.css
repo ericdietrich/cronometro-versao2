@@ -1,24 +1,16 @@
 aside.board {
     background: #C4C4C4;
-    width: 35%;
+    width: 46%;
     max-width: 800px;
-    height: 350px;
-    max-height: 70%;
+    max-height: 90%;
     border-radius: 10px;
-    position: relative;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.board-panel {
-    height: 100px;
 }
 
 .header-board {
     background: #999999;
     border-radius: 10px 10px 0 0;
-    position: relative;
-    top: -20px;
-    left: 0;
+    
     margin: 0;
     display: flex;
     justify-content: center;
@@ -40,7 +32,7 @@ aside.board {
     align-items: center;
     max-height: 400px;
     overflow: auto;
-    
+    margin: 40px 20px;
 }
 
 .split-element {
@@ -59,4 +51,22 @@ aside.board {
     font-weight: bold;
     letter-spacing: 10px;
     padding: 16px 0 12px;
+}
+
+
+/**Scrollbar*/
+
+::-webkit-scrollbar {
+    height:  12px;
+    margin: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }
